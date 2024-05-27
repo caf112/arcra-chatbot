@@ -1,0 +1,59 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 垂直方向に中央揃え */
+  align-items: center; /* 水平方向に中央揃え */
+  height: 100vh; /* ビューポート全体の高さを占める */
+  background-color: white;
+}
+
+.title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* 垂直方向に配置 */
+  gap: 20px;
+  align-items: center; /* 水平方向に中央揃え */
+  justify-content: center; /* 垂直方向に中央揃え */
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.passwordInput {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.submitButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #A11A37;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}

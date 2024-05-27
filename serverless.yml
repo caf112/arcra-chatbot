@@ -1,0 +1,19 @@
+service: nextjs-app
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-northeast-1
+
+plugins:
+  - serverless-next.js
+
+custom:
+  nextConfigDir: ./
+  webpack:
+    webpackConfig: './webpack.config.js'
+    includeModules: true
+    packagerOptions:
+      scripts:
+        - 'rm -r node_modules/sharp/'
+        - 'npm rebuild --arch=x64 --platform=linux sharp'
