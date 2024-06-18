@@ -1,6 +1,8 @@
 import { assistantId } from "@/app/assistant-config";
 import { openai } from "@/app/openai";
 
+
+
 // upload file to assistant's vector store
 export async function POST(request) {
   const formData = await request.formData(); // process file as FormData
